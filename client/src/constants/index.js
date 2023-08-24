@@ -1,0 +1,22 @@
+export const surpriseMePrompts = [
+    'Illustrate a futuristic city in the midst of a desert, with skyscrapers emitting neon lights',
+    'Create an illustration of a magical forest with trees bearing strange and glowing fruits',
+    'Draw a never-before-seen fantasy creature with butterfly wings and a furry body',
+    'Generate a nighttime sky scene on an alien planet with three moons visible on the horizon',
+    'Illustrate a colossal spaceship exploring a colorful galaxy',
+    'Design an illustration of a humanoid robot character experiencing the sensation of rain for the first time',
+    'Create an image of a floating island in the sky with waterfalls cascading into space',
+    'Draw an underwater scene in the depths of the ocean with bioluminescent fish and colorful coral reefs',
+    'Generate a depiction of future humans with the ability to control natural elements through special tattoos on their skin',
+    'Illustrate a space race scene above a gas giant planet, featuring futuristic spacecraft',
+    'Create a meeting between extraterrestrial beings and human representatives in the middle of a vast grassy plain',
+    'Design a sunset scene in a human colony on Mars, with glass domes in the background',
+    'Generate imagery of giant creatures living in an alternate world with lower gravity',
+    'Illustrate a space-themed amusement park with slides situated above the rings of a planet',
+    'Depict a time-travel journey with a time gate in the midst of an ancient forest',
+    'Create an image of an ancient city hidden within a cave, illuminated by dim candlelight',
+    'Draw mutant sea creatures adapted to plastic and metallic waste in the oceans',
+    'Illustrate a mechanical being creating a mini sun in their laboratory',
+    'Depict a treasure hunt on an icy planet filled with enigmatic puzzles',
+    'Create a scene of a space explorers battle against mysterious cosmic entities near a wormhole'
+]
