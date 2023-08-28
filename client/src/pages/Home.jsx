@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const token = localStorage.getItem('token')
   const [loading, setIsLoading] = useState(false)
   const [allPosts, setAllPosts] = useState(null)
   const [search, setSearch] = useState('sdxax')
- 
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    if (!token) {
+      navigate('/')
+    }
+  })
+
   return (
     <>
     <Navbar />

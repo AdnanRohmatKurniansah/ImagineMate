@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { getRandomPrompt } from '../utils'
 import Footer from '../components/Footer'
 
 export default function CreatePost() {
+  const token = localStorage.getItem('token')
+
   const navigate = useNavigate()
+  useEffect(() => {
+    if (!token) {
+      navigate('/')
+    }
+  })
+
   const [form, setForm] = useState({
-    nama: '',
+    username: '',
     prompt: '',
     photo: ''
   })
