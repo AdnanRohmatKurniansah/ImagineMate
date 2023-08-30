@@ -112,11 +112,11 @@ export default function GenerateImg() {
     <>
     <Navbar />
     <section className='mx-5 md:container md:mx-auto md:px-48 mt-10 mb-10'>
-      <div className='max-w-5xl'>
-        <h1 className='font-extrabold text-3xl'>Create</h1>
-        <p className='mt-2 text-gray-500 text-xl'>Create imaginative and visually stunning images through DALL-E AI and share them with the community</p>
+      <div className=''>
+        <h1 className='font-extrabold text-3xl'>Spark Your Creativity</h1>
+        <p className='mt-2 w-full md:max-w-3xl text-gray-600 text-xl'>Unleash your creativity and craft visually captivating images with ImagineMate, then proudly share your creations with our vibrant community.</p>
       </div>
-      <form className='mt-6 max-w-3xl mb-2' onSubmit={sharing}>
+      <form className='mt-4 max-w-3xl mb-2' onSubmit={sharing}>
         <div className="flex justify-end">
           <button onClick={handleSurpriseMe} className='btn btn-neutral btn-sm text-white mb-3' type='button'>Surprise me</button>
         </div>
@@ -132,7 +132,7 @@ export default function GenerateImg() {
           {
             generatingImg && (
               <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
-                <span className="loading loading-bars loading-lg"></span>
+                <span className="loading loading-bars text-white loading-lg"></span>
               </div>
             )
           }

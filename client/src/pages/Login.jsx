@@ -64,7 +64,7 @@ export default function Login() {
   }
 
   return (
-    <div className='flex h-screen items-center justify-center bg-gradient-to-t from-slate-50 to-blue-200'>
+    <div className='flex h-screen items-center justify-center' style={{ backgroundImage: `url('/images/background.png')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
         <div className="bg-gray-700">
             <div className='w-96 border border-gray-400 p-5 py-16 bg-white transition-transform transform -translate-x-2 -translate-y-2'>
                 <h1 className='text-2xl font-bold my-5 text-center'>Login</h1>

@@ -11,11 +11,13 @@ export default function Navbar() {
   return (
     <div className="navbar bg-base-100 border">
         <div className="navbar-start">
-            <Link to={'/'} className="btn btn-ghost normal-case text-xl">IMaTe</Link>
+            <Link to={'/dashboard'} className="normal-case flex text-2xl">
+              <img src="/images/logo.png" width="100%" alt="" />
+            </Link>
         </div>
         <div className="navbar-end">
             <Link to={'/create_post'} className="text-md mr-5">Create</Link>
-            <button type='button' onClick={logoutHandler} className='btn btn-primary text-white'>Logout</button>
+            <button type='button' onClick={logoutHandler} className='btn btn-active text-xl'><i className="fa-solid fa-right-from-bracket"></i></button>
         </div>
     </div>
   )

@@ -6,7 +6,6 @@ const recordRoute = require('./src/routes/recordRoute')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const multer = require('multer')
-const path = require('path')
 
 app.use(cors())
 
@@ -33,8 +32,6 @@ app.use(multer({
     storage: fileStorage,
     fileFilter: fileFilter
 }).single('image'))
-
-app.use('/images', express.static(path.join(__dirname, 'images')))
 
 app.use('/auth', authRoute)
 app.use('/record', recordRoute)

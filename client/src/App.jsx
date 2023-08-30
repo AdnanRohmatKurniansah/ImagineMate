@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
-    <div className='bg-[#f9fafe]'>
+    <div className='bg-[#fcfcfd]'>
       <ToastContainer
         position="top-right"
         autoClose={1500}
