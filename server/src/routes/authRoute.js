@@ -4,7 +4,7 @@ const router = express.Router()
 const { body } = require('express-validator')
 
 const validateRegister = [
-    body('name').notEmpty().withMessage('Your name is empty').isLength({min: 5}).withMessage('Name min 5'),
+    body('username').notEmpty().withMessage('Your username is empty').isLength({min: 5}).withMessage('Userame min 5'),
     body('email').notEmpty().withMessage('Your email is empty').isEmail().withMessage('Email must be valid'),
     body('password').notEmpty().withMessage('Your password is empty').isLength({min: 5}).withMessage('Password min 5')
 ]

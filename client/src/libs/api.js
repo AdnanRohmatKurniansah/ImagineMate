@@ -17,3 +17,21 @@ export const login = async (data) => {
         return error
     }
 }
+
+export const share = async (data) => {
+    try {
+        const response = await axios.post('http://localhost:3000/record/share', data)
+        return response
+    } catch (error) {
+        return error
+    }
+}
+
+export const lists = async (page) => {
+    try {
+        const response = await axios.get(`http://localhost:3000/record/lists?page=${page}`)
+        return response
+    } catch (error) {
+        return error
+    }
+}

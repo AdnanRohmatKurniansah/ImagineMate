@@ -2,19 +2,33 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { lists } from '../libs/api'
 
 export default function Home() {
-  const token = localStorage.getItem('token')
   const [loading, setIsLoading] = useState(false)
-  const [allPosts, setAllPosts] = useState(null)
-  const [search, setSearch] = useState('sdxax')
+  const [allList, setList] = useState([])
+  const [search, setSearch] = useState('')
   const navigate = useNavigate()
+  const token = localStorage.getItem('token')
   
   useEffect(() => {
     if (!token) {
       navigate('/')
+    } else {
+      axios.defaults.headers.common['Authorization'] = token
+      loadLists()
     }
-  })
+  }, [])
+
+  const loadLists = async (page) => {
+    const response = await lists(page)
+    if (response.data) {
+      setList(response.data.data)
+    } else {
+      console.log(response.response.data.message)
+    }
+  }
 
   return (
     <>
@@ -44,7 +58,25 @@ export default function Home() {
                 {search ? (
                   'dscsc'
                 ) : (
-                  'sscsca'
+                  allList.length > 0 && (
+                    allList.map((list, i) => (
+                      <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card" key={i}>
+                      <img className="w-full h-auto object-cover rounded-xl" src={list.photo} />
+                        <div className="group-hover:flex flex-col max-h-[94.5%] hidden absolute bottom-0 left-0 right-0 bg-[#10131f] m-2 p-4 rounded-md">
+                          <p className="text-white text-sm overflow-y-auto prompt">{list.prompt}</p>
+                          <div className="mt-5 flex justify-between items-center gap-2">
+                            <div className="flex items-center gap-2">
+                              <div className="w-7 h-7 rounded-full object-cover bg-green-700 flex justify-center items-center text-white text-xs font-bold">{name[0]}</div>
+                              <p className="text-white text-sm">{list.username}</p>
+                            </div>
+                            <button type="button" className="outline-none bg-transparent border-none">
+                              <img src='' alt="download" className="w-6 h-6 object-contain invert" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  )
                 )}
               </div>
             </>

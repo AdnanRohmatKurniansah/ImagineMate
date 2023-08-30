@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 const bcrypt = require('bcrypt')
 
 const User = new Schema({
-    name: {
+    username: {
         type: String,
-        required: [true, 'Your name is empty'],
+        required: [true, 'Your username is empty'],
     },
     email: {
         type: String,

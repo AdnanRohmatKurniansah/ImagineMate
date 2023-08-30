@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import CreatePost from './pages/CreatePost'
+import GenerateImg from './pages/GenerateImg'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import { ToastContainer } from 'react-toastify'
@@ -27,7 +27,7 @@ function App() {
           <Route exact path='/' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/dashboard' element={<Home />} />
-          <Route path='/create_post' element={<CreatePost />} />
+          <Route path='/create_post' element={<GenerateImg />} />
         </Routes>
       </Router>
     </div>
