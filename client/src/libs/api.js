@@ -35,3 +35,21 @@ export const lists = async (page) => {
         return error
     }
 }
+
+export const history = async (page) => {
+    try {
+        const response = await axios.get(`http://localhost:3000/record/history?page=${page}`)
+        return response
+    } catch (error) {
+        return error
+    }
+}
+
+export const deleteHistory = async (id) => {
+    try {
+        const response = await axios.delete(`http://localhost:3000/record/${id}`)
+        return response
+    } catch (error) {
+        return error
+    }
+}

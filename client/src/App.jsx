@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import History from './pages/History'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/dashboard' element={<Home />} />
           <Route path='/create_post' element={<GenerateImg />} />
+          <Route path='/history' element={<History />}/>
         </Routes>
       </Router>
     </div>

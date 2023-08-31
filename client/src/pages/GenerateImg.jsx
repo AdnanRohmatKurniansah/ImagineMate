@@ -113,7 +113,7 @@ export default function GenerateImg() {
     <Navbar />
     <section className='mx-5 md:container md:mx-auto md:px-48 mt-10 mb-10'>
       <div className=''>
-        <h1 className='font-extrabold text-3xl'>Spark Your Creativity</h1>
+        <h1 className='font-semibold text-3xl'>Spark Your Creativity</h1>
         <p className='mt-2 w-full md:max-w-3xl text-gray-600 text-xl'>Unleash your creativity and craft visually captivating images with ImagineMate, then proudly share your creations with our vibrant community.</p>
       </div>
       <form className='mt-4 max-w-3xl mb-2' onSubmit={sharing}>

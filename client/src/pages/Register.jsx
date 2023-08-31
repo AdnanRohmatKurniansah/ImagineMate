@@ -50,7 +50,6 @@ export default function Register() {
     const data = Object.fromEntries(formData)
 
     const response = await register(data)
-    setLoading(true)
     if (response.data) {
         alert(response.data.message, 'success');
         navigate('/')

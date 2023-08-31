@@ -6,6 +6,7 @@ const User = new Schema({
     username: {
         type: String,
         required: [true, 'Your username is empty'],
+        unique: true
     },
     email: {
         type: String,

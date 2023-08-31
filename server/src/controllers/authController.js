@@ -15,12 +15,21 @@ exports.register = async (req, res, next) => {
 
     try {
         const { username, email, password } = req.body
-        const existingUser = await User.findOne({ email })
-        if (existingUser) {
+        const existingEmail = await User.findOne({ email });
+        const existingUsername = await User.findOne({ username });
+
+        if (existingEmail) {
             return res.status(409).json({
                 message: 'Email already used'
-            })
+            });
         }
+
+        if (existingUsername) {
+            return res.status(409).json({
+                message: 'Username already used'
+            });
+        }
+        
         const user = await User.create({ username, email, password})
 
         res.status(200).json({
@@ -56,7 +65,7 @@ exports.login = async (req, res, next) => {
         }
         const auth = await bcrypt.compare(password, user.password)
         if (auth) {
-            const token = secretToken(user._id)
+            const token = secretToken(user._id, user.email)
             return res.status(201).json({
                 message: 'Login successfully',
                 token: "Bearer " + token
