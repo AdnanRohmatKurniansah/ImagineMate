@@ -10,5 +10,7 @@ const validateShare = [
 
 router.post('/share', validateShare, verify, recordController.sharing)
 router.get('/lists', verify, recordController.lists)
+router.get('/history', verify, recordController.history)
+router.delete('/:recordId', verify, recordController.deleteHistory)
 
 module.exports = router
