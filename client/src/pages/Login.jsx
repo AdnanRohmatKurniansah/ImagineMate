@@ -67,7 +67,10 @@ export default function Login() {
     <div className='flex h-screen items-center justify-center' style={{ backgroundImage: `url('/images/background.png')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
         <div className="bg-gray-700">
             <div className='w-96 border border-gray-400 p-5 py-16 bg-white transition-transform transform -translate-x-2 -translate-y-2'>
-                <h1 className='text-2xl font-bold my-5 text-center'>Login</h1>
+              <div className="flex items-center justify-start mb-5">
+                  <img src="/images/logo.png" alt="Logo" className="mr-1"/>
+                  <h1 className="text-2xl font-bold text-center">IMATE</h1>
+              </div>
                 <form className='text-center' onSubmit={loginHandle}>
                     <input type="email" required placeholder="Email" name='email' onChange={handleChange} value={form.email} className="input input-bordered input-md w-full mb-5" />
                     <input type="password" required placeholder="Password" name='password' onChange={handleChange} value={form.password} className="input input-bordered input-md w-full mb-5" />
