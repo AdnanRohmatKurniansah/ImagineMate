@@ -1,8 +1,10 @@
-import axios from 'axios'
+import axios from `axios`
+
+const api_url = import.meta.env.API_URL
 
 export const register = async (data) => {
     try {
-        const response = await axios.post('http://localhost:3000/auth/register', data)
+        const response = await axios.post(`${api_url}/auth/register`, data)
         return response
     } catch (error) {
         return error
@@ -11,7 +13,7 @@ export const register = async (data) => {
 
 export const login = async (data) => {
     try {
-        const response = await axios.post('http://localhost:3000/auth/login', data)
+        const response = await axios.post(`${api_url}/auth/login`, data)
         return response
     } catch (error) {
         return error
@@ -20,7 +22,7 @@ export const login = async (data) => {
 
 export const share = async (data) => {
     try {
-        const response = await axios.post('http://localhost:3000/record/share', data)
+        const response = await axios.post(`${api_url}/record/share`, data)
         return response
     } catch (error) {
         return error
@@ -29,7 +31,7 @@ export const share = async (data) => {
 
 export const lists = async (page) => {
     try {
-        const response = await axios.get(`http://localhost:3000/record/lists?page=${page}`)
+        const response = await axios.get(`${api_url}/record/lists?page=${page}`)
         return response
     } catch (error) {
         return error
@@ -38,7 +40,7 @@ export const lists = async (page) => {
 
 export const history = async (page) => {
     try {
-        const response = await axios.get(`http://localhost:3000/record/history?page=${page}`)
+        const response = await axios.get(`${api_url}/record/history?page=${page}`)
         return response
     } catch (error) {
         return error
@@ -47,7 +49,7 @@ export const history = async (page) => {
 
 export const deleteHistory = async (id) => {
     try {
-        const response = await axios.delete(`http://localhost:3000/record/${id}`)
+        const response = await axios.delete(`${api_url}/record/${id}`)
         return response
     } catch (error) {
         return error
