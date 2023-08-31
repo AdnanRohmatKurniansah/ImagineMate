@@ -93,7 +93,7 @@ export default function Home() {
                           <div className="rounded-xl group relative card" key={i}>
                           <img className="w-full h-auto object-cover rounded-xl" src={list.photo} />
                             <div className="group-hover:flex flex-col max-h-[94.5%] hidden absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.6)] m-2 p-4 rounded-md">
-                              <p className="text-white text-sm overflow-y-auto">{list.prompt}</p>
+                              <p className="text-white text-sm overflow-y-auto uppercase">{list.prompt}</p>
                               <div className="mt-5 flex justify-between items-center gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="w-7 h-7 rounded-full object-cover bg-blue-700 flex justify-center items-center text-white text-xs font-bold">{name[0]}</div>
@@ -121,7 +121,7 @@ export default function Home() {
                           <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card" key={i}>
                             <img className="w-full h-auto object-cover rounded-xl" src={list.photo} />
                             <div className="group-hover:flex flex-col max-h-[94.5%] hidden absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.6)] m-2 p-4 rounded-md">
-                              <p className="text-white text-sm overflow-y-auto prompt">{list.prompt}</p>
+                              <p className="text-white text-sm overflow-y-auto uppercase">{list.prompt}</p>
                               <div className="mt-5 flex justify-between items-center gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="w-7 h-7 rounded-full object-cover bg-blue-700 flex justify-center items-center text-white text-xs font-bold">{name[0]}</div>

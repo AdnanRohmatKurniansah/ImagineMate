@@ -7,7 +7,7 @@ require('dotenv').config()
 exports.lists = async (req, res, next) => {
     try {
         const currentPage = req.query.page || 1
-        const perPage = req.query.perPage || 10
+        const perPage = req.query.perPage || 20
         let totalItems
 
         const count = await Record.countDocuments()
@@ -85,7 +85,7 @@ exports.sharing = async (req, res, next) => {
 exports.history = async (req, res, next) => {
     try {
         const currentPage = req.query.page || 1
-        const perPage = req.query.perPage || 10
+        const perPage = req.query.perPage || 20
         let totalItems
 
         const count = await Record.countDocuments()
