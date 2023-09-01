@@ -1,4 +1,4 @@
-import axios from `axios`
+import axios from 'axios'
 
 const api_url = import.meta.env.API_URL
 
