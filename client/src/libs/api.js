@@ -55,3 +55,22 @@ export const deleteHistory = async (id) => {
         return error
     }
 }
+
+export const validate = async () => {
+    try {
+        const response = await axios.get(`${api_url}/auth/validate`)
+        return response
+    } catch (error) {
+        return error
+    }
+}
+
+// export const refreshtoken = async () => {
+//     try {
+//         const response = await axios.get(`${api_url}/auth/refresh_token`)
+//         return response
+//     } catch (error) {
+//         return error
+//     }
+
+// }

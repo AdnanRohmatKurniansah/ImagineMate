@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 export default function History() {
-  const token = localStorage.getItem('token')
   const [loading, setIsLoading] = useState(true)
   const [allHistory, setAllHistory] = useState([])
   const [paginate, setPaginate] = useState([])
@@ -27,12 +26,7 @@ export default function History() {
   };
 
   useEffect(() => {
-    if (!token) {
-      navigate('/')
-    } else {
-      axios.defaults.headers.common['Authorization'] = token
-      loadHistory(counter)
-    }
+    loadHistory(counter)
   }, [counter])
 
   const loadHistory = async (page) => {

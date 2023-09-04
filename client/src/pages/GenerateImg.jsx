@@ -9,17 +9,8 @@ import { share } from '../libs/api'
 
 
 export default function GenerateImg() {
-  const token = localStorage.getItem('token')
-  
   const navigate = useNavigate()
-  useEffect(() => {
-    if (!token) {
-      navigate('/')
-    } else {
-      axios.defaults.headers.common['Authorization'] = token
-    }
-  })
-
+  
   const alert = (message, type) => {
     toast[type](message, {
       position: 'top-right',

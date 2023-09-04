@@ -7,7 +7,10 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const multer = require('multer')
 
-app.use(cors())
+app.use(cors({
+    credentials:true,
+    origin: 'https://imatesite.vercel.app',
+}))
 
 app.use(express.json())
 

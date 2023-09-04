@@ -9,19 +9,12 @@ export default function Home() {
   const [loading, setIsLoading] = useState(false)
   const [allList, setList] = useState([])
   const [search, setSearch] = useState('')
-  const navigate = useNavigate()
-  const token = localStorage.getItem('token')
   const [paginate, setPaginate] = useState([])
   const [counter, setCounter] = useState(1)
   const [searchResult, setSearchResult] = useState(null)
   
   useEffect(() => {
-    if (!token) {
-      navigate('/')
-    } else {
-      axios.defaults.headers.common['Authorization'] = token
-      loadLists(counter)
-    }
+    loadLists(counter)
   }, [counter])
 
   const loadLists = async (page) => {
